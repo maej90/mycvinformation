@@ -20,6 +20,14 @@
 		71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4323E674A800F18AB3 /* CVInfoModel.swift */; };
 		71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */; };
 		71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4823E67C2F00F18AB3 /* MyCVService.swift */; };
+		71F11C4C23E696FA00F18AB3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4B23E696FA00F18AB3 /* HeaderView.swift */; };
+		71F11C4F23E6B77700F18AB3 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71F11C4E23E6B77700F18AB3 /* avatar.jpg */; };
+		71F11C5323E6C11B00F18AB3 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */; };
+		71F11C5423E6C11B00F18AB3 /* ExperienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */; };
+		71F11C5623E6CF8A00F18AB3 /* MyCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5523E6CF8A00F18AB3 /* MyCVDataSource.swift */; };
+		71F11C5923E746F300F18AB3 /* MyCVViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5823E746F300F18AB3 /* MyCVViewController+DataSource.swift */; };
+		71F11C5B23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5A23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift */; };
+		71F11C5D23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5C23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,14 @@
 		71F11C4323E674A800F18AB3 /* CVInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVInfoModel.swift; sourceTree = "<group>"; };
 		71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConnection.swift; sourceTree = "<group>"; };
 		71F11C4823E67C2F00F18AB3 /* MyCVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVService.swift; sourceTree = "<group>"; };
+		71F11C4B23E696FA00F18AB3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		71F11C4E23E6B77700F18AB3 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceTableViewCell.xib; sourceTree = "<group>"; };
+		71F11C5523E6CF8A00F18AB3 /* MyCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVDataSource.swift; sourceTree = "<group>"; };
+		71F11C5823E746F300F18AB3 /* MyCVViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCVViewController+DataSource.swift"; sourceTree = "<group>"; };
+		71F11C5A23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCVViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		71F11C5C23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCVViewController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		7157538723E5417400A93A12 /* MyCV */ = {
 			isa = PBXGroup;
 			children = (
+				71F11C4D23E6B6E800F18AB3 /* Resources */,
 				71F11C4523E6750A00F18AB3 /* ServiceModule */,
 				7105FDFC23E6489D00FA0DD7 /* EntityModule */,
 				715753AD23E642B300A93A12 /* MyCVModule */,
@@ -123,13 +140,21 @@
 		715753AD23E642B300A93A12 /* MyCVModule */ = {
 			isa = PBXGroup;
 			children = (
-				7157538C23E5417400A93A12 /* MyCVViewController.swift */,
-				7105FDF423E6438C00FA0DD7 /* MyCVPresenter.swift */,
-				7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */,
+				71665A9823E74B220008BA4E /* Interactor */,
+				71F11C5E23E74A1500F18AB3 /* Presenter */,
+				71F11C4A23E696CE00F18AB3 /* View */,
 				7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */,
 				7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */,
 			);
 			path = MyCVModule;
+			sourceTree = "<group>";
+		};
+		71665A9823E74B220008BA4E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		71F11C4523E6750A00F18AB3 /* ServiceModule */ = {
@@ -139,6 +164,53 @@
 				71F11C4823E67C2F00F18AB3 /* MyCVService.swift */,
 			);
 			path = ServiceModule;
+			sourceTree = "<group>";
+		};
+		71F11C4A23E696CE00F18AB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71F11C5723E746CE00F18AB3 /* ViewController */,
+				71F11C5023E6C0B200F18AB3 /* Cell */,
+				71F11C4B23E696FA00F18AB3 /* HeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71F11C4D23E6B6E800F18AB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71F11C4E23E6B77700F18AB3 /* avatar.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		71F11C5023E6C0B200F18AB3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */,
+				71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		71F11C5723E746CE00F18AB3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7157538C23E5417400A93A12 /* MyCVViewController.swift */,
+				71F11C5C23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift */,
+				71F11C5823E746F300F18AB3 /* MyCVViewController+DataSource.swift */,
+				71F11C5A23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		71F11C5E23E74A1500F18AB3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				71F11C5523E6CF8A00F18AB3 /* MyCVDataSource.swift */,
+				7105FDF423E6438C00FA0DD7 /* MyCVPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F11C4F23E6B77700F18AB3 /* avatar.jpg in Resources */,
 				7157539523E5417500A93A12 /* LaunchScreen.storyboard in Resources */,
+				71F11C5423E6C11B00F18AB3 /* ExperienceTableViewCell.xib in Resources */,
 				7157539223E5417500A93A12 /* Assets.xcassets in Resources */,
 				7157539023E5417400A93A12 /* Main.storyboard in Resources */,
 			);
@@ -242,11 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F11C5923E746F300F18AB3 /* MyCVViewController+DataSource.swift in Sources */,
 				7157538D23E5417400A93A12 /* MyCVViewController.swift in Sources */,
+				71F11C5623E6CF8A00F18AB3 /* MyCVDataSource.swift in Sources */,
 				7105FDF723E643DA00FA0DD7 /* MyCVInteractor.swift in Sources */,
+				71F11C5B23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift in Sources */,
 				7105FDF523E6438C00FA0DD7 /* MyCVPresenter.swift in Sources */,
 				71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */,
 				71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */,
+				71F11C4C23E696FA00F18AB3 /* HeaderView.swift in Sources */,
+				71F11C5323E6C11B00F18AB3 /* ExperienceTableViewCell.swift in Sources */,
+				71F11C5D23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift in Sources */,
 				7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */,
 				71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */,
 				7157538923E5417400A93A12 /* AppDelegate.swift in Sources */,

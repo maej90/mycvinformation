@@ -19,22 +19,22 @@ struct CVInfoModel: Codable {
 }
 
 // MARK: - Certificate
-struct Certificate: Codable {
+struct Certificate: Codable,Row {
     let period, name: String
 }
 
 // MARK: - Education
-struct Education: Codable {
+struct Education: Codable,Row {
     let period, name, carrer: String
 }
 
 // MARK: - PersonalInfo
-struct PersonalInfo: Codable {
+struct PersonalInfo: Codable,Row {
     let name, value: String
 }
 
 // MARK: - Work
-struct Work: Codable {
+struct Work: Codable,Row {
     let position, period, company: String
     let accomplishments: [String]
 }

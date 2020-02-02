@@ -13,9 +13,10 @@ class MyCVBuilder{
 	static func buildCV() -> UIViewController{
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let viewController = storyboard.instantiateViewController(identifier: "MyCVViewControllerIdentifier") as! MyCVViewController
-		let interactor = MyCVInteractor()
 		let router = MyCVRouter()
+		let interactor = MyCVInteractor()
 		let presenter = MyCVPresenter(view: viewController, interactor: interactor, router: router)
+		interactor.presentationDelegate = presenter
 		viewController.presenter = presenter
 		return viewController
 	}
