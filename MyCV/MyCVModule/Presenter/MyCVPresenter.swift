@@ -18,6 +18,7 @@ protocol CVPresentation {
 	func numberOfSections() -> Int
 	func numberOfRowsInSection(section:Int) -> Int
 	func section(atIndex index: Int) -> CVSection?
+	func headerInfo() -> Header
 }
 
 extension String:Row{}
@@ -29,7 +30,8 @@ class MyCVPresenter{
 	private var router:CVRouting
 	
 	//Table view datasource
-	var dataSource:MyCVDataSource?
+	private var dataSource:MyCVDataSource?
+	var header:Header?
 	
 	init(view: MyCVView, interactor: CVUseCase, router:CVRouting) {
 		self.view = view
@@ -50,11 +52,17 @@ class MyCVPresenter{
 		sections.append(CVSection(sectionTitle: "Languagues", rows: infoModel.languages))
 		
 		dataSource = MyCVDataSource(sections: sections)
+		header = Header(name: infoModel.name, position: infoModel.currentPosition, resume: infoModel.resume)
+		
 	}
 	
 }
 
 extension MyCVPresenter: CVPresentation{
+	func headerInfo() -> Header {
+		return self.header ?? Header(name: "", position: "", resume: "")
+	}
+	
 	func viewWillAppear() {
 		self.interactor.fetchCVData()
 	}

@@ -8,17 +8,16 @@
 
 import UIKit
 
-protocol HeaderViewable {
-	func updateHeaderInformation()
-	func moveAvatarWhenScrolling()
+struct Header{
+	let name:String
+	let position:String
+	let resume:String
 }
 
 class HeaderView: UIView {
 
 	private lazy var avatarImageView:UIImageView = {
 		let imageView = UIImageView()
-		let image = UIImage(named: "avatar.jpg")
-		imageView.image = image
 		imageView.clipsToBounds = true
 		imageView.contentMode = .scaleToFill
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,11 +26,9 @@ class HeaderView: UIView {
 	
 	private lazy var resumeLabel:UILabel = {
 		let label = UILabel()
-		label.font = UIFont.systemFont(ofSize: 12)
-		label.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+		label.font = UIFont.systemFont(ofSize: 14)
 		label.numberOfLines = 0
 		label.sizeToFit()
-		label.contentMode = .topLeft
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
@@ -39,7 +36,6 @@ class HeaderView: UIView {
 	private lazy var myNameLabel:UILabel = {
 		let label = UILabel()
 		label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
-		label.text = "MARCO ESPINAL"
 		label.textAlignment = .left
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
@@ -48,7 +44,6 @@ class HeaderView: UIView {
 	private lazy var myCurrentPositionLabel:UILabel = {
 		let label = UILabel()
 		label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-		label.text = "TECH LEADER"
 		label.textAlignment = .left
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
@@ -103,24 +98,11 @@ class HeaderView: UIView {
 		return true
 	}
 	
-}
-
-extension HeaderView: HeaderViewable{
-	func moveAvatarWhenScrolling() {
+	func update(headerInfo:Header){
+		self.myNameLabel.text = headerInfo.name
+		self.myCurrentPositionLabel.text = headerInfo.position
+		self.avatarImageView.image = UIImage(named: "avatar.jpg")
+		self.resumeLabel.text = headerInfo.resume
 	}
-	func updateHeaderInformation() {
-		
-	}
+	
 }
-
-//protocol HeaderPresentation {
-//
-//}
-//
-//class HeaderPresenter{
-//
-//}
-//
-//extension HeaderPresenter:HeaderPresentation{
-//
-//}

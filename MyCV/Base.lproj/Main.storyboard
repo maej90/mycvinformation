@@ -15,25 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-S0-PkL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-S0-PkL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="B6p-bO-xzj" id="sd6-aT-LsB"/>
                                     <outlet property="delegate" destination="B6p-bO-xzj" id="udc-qj-vLS"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="wiv-PL-gre">
+                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="t79-im-CL0"/>
+                                    <constraint firstAttribute="width" constant="50" id="uBN-Em-vsh"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vsx-kl-k84" firstAttribute="trailing" secondItem="1tu-S0-PkL" secondAttribute="trailing" id="2vS-w7-mSQ"/>
                             <constraint firstItem="1tu-S0-PkL" firstAttribute="leading" secondItem="vsx-kl-k84" secondAttribute="leading" id="9Jm-3C-LmB"/>
                             <constraint firstItem="vsx-kl-k84" firstAttribute="bottom" secondItem="1tu-S0-PkL" secondAttribute="bottom" id="Jf4-wa-7S7"/>
+                            <constraint firstItem="wiv-PL-gre" firstAttribute="centerY" secondItem="vsx-kl-k84" secondAttribute="centerY" id="m1X-4H-uVq"/>
+                            <constraint firstItem="wiv-PL-gre" firstAttribute="centerX" secondItem="vsx-kl-k84" secondAttribute="centerX" id="m35-69-wja"/>
                             <constraint firstItem="1tu-S0-PkL" firstAttribute="top" secondItem="vsx-kl-k84" secondAttribute="top" id="nAs-wf-HQJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vsx-kl-k84"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wiv-PL-gre" id="g3s-1f-1lw"/>
                         <outlet property="tableView" destination="1tu-S0-PkL" id="C07-a9-2mx"/>
                     </connections>
                 </viewController>

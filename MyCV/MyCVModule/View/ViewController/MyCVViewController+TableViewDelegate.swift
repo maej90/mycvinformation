@@ -9,7 +9,12 @@
 import UIKit
 
 extension MyCVViewController:UITableViewDelegate{
-//	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//		return 50
-//	}
+
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		guard let section = self.presenter.section(atIndex: section) else { return nil }
+		let view = SectionView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+		view.updateTitle(title: section.sectionTitle)
+		return view
+	}
+	
 }

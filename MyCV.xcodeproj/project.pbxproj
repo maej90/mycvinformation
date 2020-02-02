@@ -11,6 +11,7 @@
 		7105FDF723E643DA00FA0DD7 /* MyCVInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */; };
 		7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */; };
 		7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */; };
+		712F985E23E75AC00074EF32 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F985D23E75AC00074EF32 /* SectionView.swift */; };
 		7157538923E5417400A93A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538823E5417400A93A12 /* AppDelegate.swift */; };
 		7157538D23E5417400A93A12 /* MyCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538C23E5417400A93A12 /* MyCVViewController.swift */; };
 		7157539023E5417400A93A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7157538E23E5417400A93A12 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVInteractor.swift; sourceTree = "<group>"; };
 		7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVRouter.swift; sourceTree = "<group>"; };
 		7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVBuilder.swift; sourceTree = "<group>"; };
+		712F985D23E75AC00074EF32 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		7157538523E5417400A93A12 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7157538823E5417400A93A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7157538C23E5417400A93A12 /* MyCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			path = EntityModule;
 			sourceTree = "<group>";
 		};
+		712F985C23E75A1A0074EF32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		7157537C23E5417400A93A12 = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +150,10 @@
 		715753AD23E642B300A93A12 /* MyCVModule */ = {
 			isa = PBXGroup;
 			children = (
+				712F985C23E75A1A0074EF32 /* Router */,
 				71665A9823E74B220008BA4E /* Interactor */,
 				71F11C5E23E74A1500F18AB3 /* Presenter */,
 				71F11C4A23E696CE00F18AB3 /* View */,
-				7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */,
 				7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */,
 			);
 			path = MyCVModule;
@@ -172,6 +182,7 @@
 				71F11C5723E746CE00F18AB3 /* ViewController */,
 				71F11C5023E6C0B200F18AB3 /* Cell */,
 				71F11C4B23E696FA00F18AB3 /* HeaderView.swift */,
+				712F985D23E75AC00074EF32 /* SectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				71F11C5323E6C11B00F18AB3 /* ExperienceTableViewCell.swift in Sources */,
 				71F11C5D23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift in Sources */,
 				7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */,
+				712F985E23E75AC00074EF32 /* SectionView.swift in Sources */,
 				71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */,
 				7157538923E5417400A93A12 /* AppDelegate.swift in Sources */,
 				7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */,

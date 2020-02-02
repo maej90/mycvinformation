@@ -17,6 +17,7 @@ protocol MyCVView:class{
 class MyCVViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
 	var headerView:HeaderView!
 	
@@ -24,7 +25,7 @@ class MyCVViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		self.activityIndicator.startAnimating()
 		//Register custom cells
 		self.tableView.register(UINib(nibName: "ExperienceTableViewCell", bundle: nil), forCellReuseIdentifier: "ExperienceIdentifier")
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -51,6 +52,8 @@ class MyCVViewController: UIViewController {
 extension MyCVViewController: MyCVView{
 	
 	func updateCVInformation() {
+		self.activityIndicator.stopAnimating()
+		self.headerView.update(headerInfo: self.presenter.headerInfo())
 		self.tableView.reloadData()
 	}
 	

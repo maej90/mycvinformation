@@ -24,6 +24,8 @@ class ExperienceTableViewCell: UITableViewCell {
 		self.positionLabel.text = position
 		self.companyLabel.text = company
 		
+		self.acomplishmentStackview.arrangedSubviews.forEach{ $0.removeFromSuperview() }
+		
 		for acomplishment in acomplishments{
 			let label = UILabel()
 			label.text = "* " + acomplishment
