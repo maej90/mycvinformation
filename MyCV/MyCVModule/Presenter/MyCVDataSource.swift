@@ -10,11 +10,22 @@ import Foundation
 
 protocol Row {}
 
+enum Section{
+	case experience
+	case education
+	case certificate
+	case interest
+	case skills
+	case personalInformation
+	case languagues
+}
+
 struct MyCVDataSource{
 	let sections:[CVSection]
 }
 
 struct CVSection{
+	let section:Section
 	let sectionTitle:String
 	let rows:[Row]
 }

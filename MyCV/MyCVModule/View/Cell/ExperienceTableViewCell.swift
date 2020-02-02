@@ -19,22 +19,84 @@ class ExperienceTableViewCell: UITableViewCell {
         // Initialization code
     }
 	
-	func setup(period:String, position:String, company:String, acomplishments:[String]){
-		self.periodLabel.text = period
-		self.positionLabel.text = position
-		self.companyLabel.text = company
-		
+	private func setup(){
 		self.acomplishmentStackview.arrangedSubviews.forEach{ $0.removeFromSuperview() }
-		
-		for acomplishment in acomplishments{
+		self.periodLabel.sizeToFit()
+		self.positionLabel.sizeToFit()
+		self.companyLabel.sizeToFit()
+	}
+	
+	func setup(row:Row){
+		self.setup()
+		if let experience = row as? Work{
+			
+			self.periodLabel.isHidden = false
+			self.positionLabel.isHidden = false
+			self.companyLabel.isHidden = false
+			
+			self.periodLabel.text = experience.period
+			self.positionLabel.text = experience.position
+			self.companyLabel.text = experience.company
+			
+			for acomplishment in experience.accomplishments{
+				let label = UILabel()
+				label.text = "* " + acomplishment
+				label.textAlignment = .left
+				label.font = UIFont.systemFont(ofSize: 14)
+				label.numberOfLines = 0
+				self.acomplishmentStackview.addArrangedSubview(label)
+			}
+		}else if let education = row as? Education{
+			
+			self.periodLabel.isHidden = false
+			self.positionLabel.isHidden = false
+			self.companyLabel.isHidden = true
+
+			self.periodLabel.text = education.period
+			self.positionLabel.text = education.name
+			
 			let label = UILabel()
-			label.text = "* " + acomplishment
+			label.text = "* " + education.carrer
+			label.textAlignment = .left
+			label.font = UIFont.systemFont(ofSize: 14)
+			label.numberOfLines = 0
+			self.acomplishmentStackview.addArrangedSubview(label)
+			
+		}else if let certificate = row as? Certificate{
+			self.periodLabel.isHidden = true
+			self.positionLabel.isHidden = true
+			self.companyLabel.isHidden = true
+			
+			let label = UILabel()
+			label.text = "* " + certificate.name
 			label.textAlignment = .left
 			label.font = UIFont.systemFont(ofSize: 14)
 			label.numberOfLines = 0
 			self.acomplishmentStackview.addArrangedSubview(label)
 		}
-		
+		else if let personalInfo = row as? PersonalInfo{
+			self.periodLabel.isHidden = true
+			self.positionLabel.isHidden = true
+			self.companyLabel.isHidden = true
+			let label = UILabel()
+			label.text = "\(personalInfo.name): " + personalInfo.value
+			label.textAlignment = .left
+			label.font = UIFont.systemFont(ofSize: 14)
+			label.numberOfLines = 0
+			self.acomplishmentStackview.addArrangedSubview(label)
+		}
+		else if let str = row as? String{
+			self.periodLabel.isHidden = true
+			self.positionLabel.isHidden = true
+			self.companyLabel.isHidden = true
+			
+			let label = UILabel()
+			label.text = "* " + str
+			label.textAlignment = .left
+			label.font = UIFont.systemFont(ofSize: 14)
+			label.numberOfLines = 0
+			self.acomplishmentStackview.addArrangedSubview(label)
+		}
 	}
 	
 	

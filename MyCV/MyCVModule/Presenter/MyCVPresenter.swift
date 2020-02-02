@@ -43,13 +43,13 @@ class MyCVPresenter{
 		
 		var sections:[CVSection] = [CVSection]()
 		
-		sections.append(CVSection(sectionTitle: "Experience", rows: infoModel.work))
-		sections.append(CVSection(sectionTitle: "Education", rows: [infoModel.education]))
-		sections.append(CVSection(sectionTitle: "Certificates", rows: infoModel.certificates))
-		sections.append(CVSection(sectionTitle: "Interests", rows: infoModel.interests))
-		sections.append(CVSection(sectionTitle: "Personal Information", rows: infoModel.personalInfo))
-		sections.append(CVSection(sectionTitle: "Skills", rows: infoModel.skills))
-		sections.append(CVSection(sectionTitle: "Languagues", rows: infoModel.languages))
+		sections.append(CVSection(section: .experience, sectionTitle: "Experience", rows: infoModel.work))
+		sections.append(CVSection(section: .education, sectionTitle: "Education", rows: [infoModel.education]))
+		sections.append(CVSection(section: .certificate, sectionTitle: "Certificates", rows: infoModel.certificates))
+		sections.append(CVSection(section: .interest, sectionTitle: "Interests", rows: infoModel.interests))
+		sections.append(CVSection(section: .personalInformation, sectionTitle: "Personal Information", rows: infoModel.personalInfo))
+		sections.append(CVSection(section: .skills, sectionTitle: "Skills", rows: infoModel.skills))
+		sections.append(CVSection(section: .languagues, sectionTitle: "Languagues", rows: infoModel.languages))
 		
 		dataSource = MyCVDataSource(sections: sections)
 		header = Header(name: infoModel.name, position: infoModel.currentPosition, resume: infoModel.resume)

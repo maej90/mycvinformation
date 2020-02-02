@@ -32,6 +32,7 @@ class MyCVViewController: UIViewController {
 		
 		//Lets create and add the stretchy header
 		headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 250))
+		headerView.autoresizingMask = .flexibleWidth
 		self.view.addSubview(headerView)
 		
 		//I set top inset to 200 so to have enough space for the stretchy header
