@@ -19,6 +19,7 @@
 		715753A023E5417500A93A12 /* MyCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157539F23E5417500A93A12 /* MyCVTests.swift */; };
 		71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4323E674A800F18AB3 /* CVInfoModel.swift */; };
 		71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */; };
+		71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4823E67C2F00F18AB3 /* MyCVService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		715753A123E5417500A93A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F11C4323E674A800F18AB3 /* CVInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVInfoModel.swift; sourceTree = "<group>"; };
 		71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConnection.swift; sourceTree = "<group>"; };
+		71F11C4823E67C2F00F18AB3 /* MyCVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */,
+				71F11C4823E67C2F00F18AB3 /* MyCVService.swift */,
 			);
 			path = ServiceModule;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				7105FDF723E643DA00FA0DD7 /* MyCVInteractor.swift in Sources */,
 				7105FDF523E6438C00FA0DD7 /* MyCVPresenter.swift in Sources */,
 				71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */,
+				71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */,
 				7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */,
 				71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */,
 				7157538923E5417400A93A12 /* AppDelegate.swift in Sources */,

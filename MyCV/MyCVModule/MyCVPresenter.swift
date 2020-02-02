@@ -17,6 +17,7 @@ class MyCVPresenter{
 	private weak var view:MyCVView?
 	private var interactor: CVInteractableUseCase
 	private var router:CVRouting
+	private var cvInfo:CVInfoModel?
 	
 	init(view: MyCVView, interactor: CVInteractableUseCase, router:CVRouting) {
 		self.view = view
@@ -27,10 +28,15 @@ class MyCVPresenter{
 
 extension MyCVPresenter: CVPresentation{
 	func viewDidLoad() {
-		let myCVInformation = self.interactor.getMyCVInfo()// aqui se obtiene la informacion del servidor
-		DispatchQueue.main.async { [weak self] in
-			guard let self  = self else { return }
-			self.view?.updateCVInformation(myCVInfo: myCVInformation)
+		self.interactor.getMyCVInfo { [weak self] (infoModel) in
+			DispatchQueue.main.async {
+				if let cv = infoModel.info{
+					self?.cvInfo = cv
+				}
+				else{
+					self?.view?.showErrorMessage(message: infoModel.message)
+				}
+			}
 		}
 	}
 }

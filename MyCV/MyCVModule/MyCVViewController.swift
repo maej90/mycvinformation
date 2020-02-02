@@ -10,9 +10,11 @@ import UIKit
 
 protocol MyCVView:class{
 	func updateCVInformation(myCVInfo:String)
+	func showErrorMessage(message:String)
 }
 
-class MyCVViewController: UIViewController {
+
+class MyCVViewController: UITableViewController {
 	@IBOutlet weak var myCVLabel: UILabel!
 	
 	var presenter:CVPresentation!
@@ -28,6 +30,13 @@ class MyCVViewController: UIViewController {
 }
 
 extension MyCVViewController:MyCVView{
+	func showErrorMessage(message: String) {
+		let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+		let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+		alert.addAction(action)
+		self.present(alert, animated: true, completion: nil)
+	}
+	
 	func updateCVInformation(myCVInfo: String) {
 		self.myCVLabel.text = myCVInfo
 		print("Aqui se obtiene la informacion de mi cv\(myCVInfo)")

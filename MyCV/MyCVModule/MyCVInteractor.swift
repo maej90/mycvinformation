@@ -7,16 +7,17 @@
 //
 
 protocol CVInteractableUseCase {
-	func getMyCVInfo() -> String // aqui retornar el modelo de mi información
+	func getMyCVInfo(completionHandler:@escaping (CVInfoModelResponse)-> Void) // aqui retornar el modelo de mi información
 }
 
 class MyCVInteractor{
-	
-	
+	private let cvService = MyCVService.shared
 }
 
 extension MyCVInteractor: CVInteractableUseCase{
-	func getMyCVInfo() -> String {
-		return "MYCVINFORMATion"
+	func getMyCVInfo(completionHandler: @escaping (CVInfoModelResponse) -> Void) {
+		cvService.requestCVInformation { (infoModel) in
+			completionHandler(infoModel)
+		}
 	}
 }
