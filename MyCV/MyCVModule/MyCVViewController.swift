@@ -19,7 +19,8 @@ class MyCVViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		self.presenter.viewDidLoad()
+
+		self.presenter.viewDidLoad()
 		// Do any additional setup after loading the view.
 	}
 

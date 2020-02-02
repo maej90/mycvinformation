@@ -11,13 +11,14 @@
 		7105FDF723E643DA00FA0DD7 /* MyCVInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */; };
 		7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */; };
 		7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */; };
-		7105FDFE23E659F700FA0DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDFD23E659F600FA0DD7 /* SceneDelegate.swift */; };
 		7157538923E5417400A93A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538823E5417400A93A12 /* AppDelegate.swift */; };
 		7157538D23E5417400A93A12 /* MyCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538C23E5417400A93A12 /* MyCVViewController.swift */; };
 		7157539023E5417400A93A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7157538E23E5417400A93A12 /* Main.storyboard */; };
 		7157539223E5417500A93A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7157539123E5417500A93A12 /* Assets.xcassets */; };
 		7157539523E5417500A93A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7157539323E5417500A93A12 /* LaunchScreen.storyboard */; };
 		715753A023E5417500A93A12 /* MyCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157539F23E5417500A93A12 /* MyCVTests.swift */; };
+		71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4323E674A800F18AB3 /* CVInfoModel.swift */; };
+		71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 		7105FDF623E643DA00FA0DD7 /* MyCVInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVInteractor.swift; sourceTree = "<group>"; };
 		7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVRouter.swift; sourceTree = "<group>"; };
 		7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVBuilder.swift; sourceTree = "<group>"; };
-		7105FDFD23E659F600FA0DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7157538523E5417400A93A12 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7157538823E5417400A93A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7157538C23E5417400A93A12 /* MyCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		7157539B23E5417500A93A12 /* MyCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7157539F23E5417500A93A12 /* MyCVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVTests.swift; sourceTree = "<group>"; };
 		715753A123E5417500A93A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71F11C4323E674A800F18AB3 /* CVInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVInfoModel.swift; sourceTree = "<group>"; };
+		71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		7105FDFC23E6489D00FA0DD7 /* EntityModule */ = {
 			isa = PBXGroup;
 			children = (
+				71F11C4323E674A800F18AB3 /* CVInfoModel.swift */,
 			);
 			path = EntityModule;
 			sourceTree = "<group>";
@@ -94,10 +97,10 @@
 		7157538723E5417400A93A12 /* MyCV */ = {
 			isa = PBXGroup;
 			children = (
+				71F11C4523E6750A00F18AB3 /* ServiceModule */,
 				7105FDFC23E6489D00FA0DD7 /* EntityModule */,
 				715753AD23E642B300A93A12 /* MyCVModule */,
 				7157538823E5417400A93A12 /* AppDelegate.swift */,
-				7105FDFD23E659F600FA0DD7 /* SceneDelegate.swift */,
 				7157538E23E5417400A93A12 /* Main.storyboard */,
 				7157539123E5417500A93A12 /* Assets.xcassets */,
 				7157539323E5417500A93A12 /* LaunchScreen.storyboard */,
@@ -125,6 +128,14 @@
 				7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */,
 			);
 			path = MyCVModule;
+			sourceTree = "<group>";
+		};
+		71F11C4523E6750A00F18AB3 /* ServiceModule */ = {
+			isa = PBXGroup;
+			children = (
+				71F11C4623E6758A00F18AB3 /* ServiceConnection.swift */,
+			);
+			path = ServiceModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7157538D23E5417400A93A12 /* MyCVViewController.swift in Sources */,
-				7105FDFE23E659F700FA0DD7 /* SceneDelegate.swift in Sources */,
 				7105FDF723E643DA00FA0DD7 /* MyCVInteractor.swift in Sources */,
 				7105FDF523E6438C00FA0DD7 /* MyCVPresenter.swift in Sources */,
+				71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */,
 				7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */,
+				71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */,
 				7157538923E5417400A93A12 /* AppDelegate.swift in Sources */,
 				7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */,
 			);
@@ -404,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maej90.MyCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -422,7 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maej90.MyCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
