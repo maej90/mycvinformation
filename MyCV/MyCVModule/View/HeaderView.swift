@@ -73,8 +73,6 @@ class HeaderView: UIView {
 		addSubview(myCurrentPositionLabel)
 		addSubview(resumeLabel)
 		setupLayout()
-		avatarImageView.layer.cornerRadius = 50
-		avatarImageView.layer.masksToBounds = true
 	}
 	
 	private func setupLayout(){

@@ -22,6 +22,7 @@ protocol CVPresentationDataSource{
 
 protocol CVPresentation:CVPresentationDataSource {
 	func viewWillAppear() -> Void
+	func tableViewDidSelect(at indexPath:IndexPath) -> Void
 }
 
 extension String:Row{}
@@ -62,6 +63,10 @@ class MyCVPresenter{
 }
 
 extension MyCVPresenter: CVPresentation{
+	func tableViewDidSelect(at indexPath: IndexPath) {
+		guard let section = self.dataSource?.sections[indexPath.section] as? CVSection else {return}
+		let row = section.rows[indexPath.row]
+	}
 	
 	func viewWillAppear() {
 		self.interactor.fetchCVData()
@@ -89,14 +94,12 @@ extension MyCVPresenter: CVPresentationDataSource{
 
 extension MyCVPresenter: CVPresentationDelegate{
 	
-	
 	func onCVDataFetched(fetchedData: CVInfoModel) {
 		self.getTableViewDataSource(from: fetchedData)
 		DispatchQueue.main.async {
 			self.view?.updateCVInformation()
 		}
 	}
-	
 	
 	func onCVDataFetchedFailed(message: String) {
 		DispatchQueue.main.async {

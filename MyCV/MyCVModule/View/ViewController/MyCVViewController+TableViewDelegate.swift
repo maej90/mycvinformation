@@ -17,4 +17,8 @@ extension MyCVViewController:UITableViewDelegate{
 		return view
 	}
 	
+	func  tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		self.presenter.tableViewDidSelect(at: indexPath)
+	}
+	
 }
