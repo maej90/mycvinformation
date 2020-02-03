@@ -12,6 +12,8 @@
 		7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */; };
 		7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */; };
 		712F985E23E75AC00074EF32 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F985D23E75AC00074EF32 /* SectionView.swift */; };
+		712F986123E77FA20074EF32 /* CVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712F985F23E77FA10074EF32 /* CVTableViewCell.xib */; };
+		712F986223E77FA20074EF32 /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712F986023E77FA20074EF32 /* CVTableViewCell.swift */; };
 		7157538923E5417400A93A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538823E5417400A93A12 /* AppDelegate.swift */; };
 		7157538D23E5417400A93A12 /* MyCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157538C23E5417400A93A12 /* MyCVViewController.swift */; };
 		7157539023E5417400A93A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7157538E23E5417400A93A12 /* Main.storyboard */; };
@@ -23,8 +25,6 @@
 		71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4823E67C2F00F18AB3 /* MyCVService.swift */; };
 		71F11C4C23E696FA00F18AB3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C4B23E696FA00F18AB3 /* HeaderView.swift */; };
 		71F11C4F23E6B77700F18AB3 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71F11C4E23E6B77700F18AB3 /* avatar.jpg */; };
-		71F11C5323E6C11B00F18AB3 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */; };
-		71F11C5423E6C11B00F18AB3 /* ExperienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */; };
 		71F11C5623E6CF8A00F18AB3 /* MyCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5523E6CF8A00F18AB3 /* MyCVDataSource.swift */; };
 		71F11C5923E746F300F18AB3 /* MyCVViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5823E746F300F18AB3 /* MyCVViewController+DataSource.swift */; };
 		71F11C5B23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F11C5A23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift */; };
@@ -47,6 +47,8 @@
 		7105FDF823E6442F00FA0DD7 /* MyCVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVRouter.swift; sourceTree = "<group>"; };
 		7105FDFA23E6449900FA0DD7 /* MyCVBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVBuilder.swift; sourceTree = "<group>"; };
 		712F985D23E75AC00074EF32 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		712F985F23E77FA10074EF32 /* CVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVTableViewCell.xib; sourceTree = "<group>"; };
+		712F986023E77FA20074EF32 /* CVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
 		7157538523E5417400A93A12 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7157538823E5417400A93A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7157538C23E5417400A93A12 /* MyCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		71F11C4823E67C2F00F18AB3 /* MyCVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVService.swift; sourceTree = "<group>"; };
 		71F11C4B23E696FA00F18AB3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		71F11C4E23E6B77700F18AB3 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
-		71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
-		71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceTableViewCell.xib; sourceTree = "<group>"; };
 		71F11C5523E6CF8A00F18AB3 /* MyCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVDataSource.swift; sourceTree = "<group>"; };
 		71F11C5823E746F300F18AB3 /* MyCVViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCVViewController+DataSource.swift"; sourceTree = "<group>"; };
 		71F11C5A23E7475B00F18AB3 /* MyCVViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCVViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -88,12 +88,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7105FDFC23E6489D00FA0DD7 /* EntityModule */ = {
+		7105FDFC23E6489D00FA0DD7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				71F11C4323E674A800F18AB3 /* CVInfoModel.swift */,
 			);
-			path = EntityModule;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		712F985C23E75A1A0074EF32 /* Router */ = {
@@ -127,7 +127,6 @@
 			children = (
 				71F11C4D23E6B6E800F18AB3 /* Resources */,
 				71F11C4523E6750A00F18AB3 /* ServiceModule */,
-				7105FDFC23E6489D00FA0DD7 /* EntityModule */,
 				715753AD23E642B300A93A12 /* MyCVModule */,
 				7157538823E5417400A93A12 /* AppDelegate.swift */,
 				7157538E23E5417400A93A12 /* Main.storyboard */,
@@ -150,6 +149,7 @@
 		715753AD23E642B300A93A12 /* MyCVModule */ = {
 			isa = PBXGroup;
 			children = (
+				7105FDFC23E6489D00FA0DD7 /* Entity */,
 				712F985C23E75A1A0074EF32 /* Router */,
 				71665A9823E74B220008BA4E /* Interactor */,
 				71F11C5E23E74A1500F18AB3 /* Presenter */,
@@ -198,8 +198,8 @@
 		71F11C5023E6C0B200F18AB3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				71F11C5123E6C11B00F18AB3 /* ExperienceTableViewCell.swift */,
-				71F11C5223E6C11B00F18AB3 /* ExperienceTableViewCell.xib */,
+				712F986023E77FA20074EF32 /* CVTableViewCell.swift */,
+				712F985F23E77FA10074EF32 /* CVTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -305,9 +305,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712F986123E77FA20074EF32 /* CVTableViewCell.xib in Resources */,
 				71F11C4F23E6B77700F18AB3 /* avatar.jpg in Resources */,
 				7157539523E5417500A93A12 /* LaunchScreen.storyboard in Resources */,
-				71F11C5423E6C11B00F18AB3 /* ExperienceTableViewCell.xib in Resources */,
 				7157539223E5417500A93A12 /* Assets.xcassets in Resources */,
 				7157539023E5417400A93A12 /* Main.storyboard in Resources */,
 			);
@@ -336,10 +336,10 @@
 				71F11C4723E6758A00F18AB3 /* ServiceConnection.swift in Sources */,
 				71F11C4923E67C2F00F18AB3 /* MyCVService.swift in Sources */,
 				71F11C4C23E696FA00F18AB3 /* HeaderView.swift in Sources */,
-				71F11C5323E6C11B00F18AB3 /* ExperienceTableViewCell.swift in Sources */,
 				71F11C5D23E747B400F18AB3 /* MyCVViewController+ScrollViewDelegate.swift in Sources */,
 				7105FDF923E6442F00FA0DD7 /* MyCVRouter.swift in Sources */,
 				712F985E23E75AC00074EF32 /* SectionView.swift in Sources */,
+				712F986223E77FA20074EF32 /* CVTableViewCell.swift in Sources */,
 				71F11C4423E674A800F18AB3 /* CVInfoModel.swift in Sources */,
 				7157538923E5417400A93A12 /* AppDelegate.swift in Sources */,
 				7105FDFB23E6449900FA0DD7 /* MyCVBuilder.swift in Sources */,

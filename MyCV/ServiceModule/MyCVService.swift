@@ -9,7 +9,7 @@
 import Foundation
 
 struct ApplicationURL{
-	static let cvInformationURL = "https://gist.githubusercontent.com/maej90/0b4b38bec4e79880d371b0cd3400d554/raw/b09cca08ca24600e0d3ba0f0dff8f3688a310ba7/MarcoEspinalCV.json"
+	static let cvInformationURL = "https://gist.githubusercontent.com/maej90/0b4b38bec4e79880d371b0cd3400d554/raw/5199242610d81ebd01b93bd7a3cc195120187225/MarcoEspinalCV.json"
 }
 
 struct CVInfoModelResponse{

@@ -13,12 +13,15 @@ protocol CVPresentationDelegate: class{
 	func onCVDataFetchedFailed(message:String) -> Void
 }
 
-protocol CVPresentation {
-	func viewWillAppear() -> Void
+protocol CVPresentationDataSource{
 	func numberOfSections() -> Int
 	func numberOfRowsInSection(section:Int) -> Int
 	func section(atIndex index: Int) -> CVSection?
 	func headerInfo() -> Header
+}
+
+protocol CVPresentation:CVPresentationDataSource {
+	func viewWillAppear() -> Void
 }
 
 extension String:Row{}
@@ -59,12 +62,16 @@ class MyCVPresenter{
 }
 
 extension MyCVPresenter: CVPresentation{
-	func headerInfo() -> Header {
-		return self.header ?? Header(name: "", position: "", resume: "")
-	}
 	
 	func viewWillAppear() {
 		self.interactor.fetchCVData()
+	}
+
+}
+
+extension MyCVPresenter: CVPresentationDataSource{
+	func headerInfo() -> Header {
+		return self.header ?? Header(name: "", position: "", resume: "")
 	}
 	func numberOfSections() -> Int {
 		guard let sections = self.dataSource?.sections else {return 0}
@@ -81,12 +88,16 @@ extension MyCVPresenter: CVPresentation{
 }
 
 extension MyCVPresenter: CVPresentationDelegate{
+	
+	
 	func onCVDataFetched(fetchedData: CVInfoModel) {
 		self.getTableViewDataSource(from: fetchedData)
 		DispatchQueue.main.async {
 			self.view?.updateCVInformation()
 		}
 	}
+	
+	
 	func onCVDataFetchedFailed(message: String) {
 		DispatchQueue.main.async {
 			self.view?.showErrorMessage(message: message)

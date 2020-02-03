@@ -1,5 +1,5 @@
 //
-//  ExperienceTableViewCell.swift
+//  CVTableViewCell.swift
 //  MyCV
 //
 //  Created by Marco Espinal on 02/02/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExperienceTableViewCell: UITableViewCell {
+class CVTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var periodLabel: UILabel!
 	@IBOutlet weak var positionLabel: UILabel!

@@ -11,7 +11,7 @@ import UIKit
 extension MyCVViewController:UIScrollViewDelegate{
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let y = -scrollView.contentOffset.y
-		let height = max (y,100)
+		let height = max (y,90)
 		headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: height)
 	}
 }

@@ -14,6 +14,10 @@ struct Header{
 	let resume:String
 }
 
+protocol HeaderViewable {
+	func updateView() -> Void
+}
+
 class HeaderView: UIView {
 
 	private lazy var avatarImageView:UIImageView = {
@@ -26,6 +30,7 @@ class HeaderView: UIView {
 	
 	private lazy var resumeLabel:UILabel = {
 		let label = UILabel()
+		label.textColor = .white
 		label.font = UIFont.systemFont(ofSize: 14)
 		label.numberOfLines = 0
 		label.sizeToFit()
@@ -35,6 +40,7 @@ class HeaderView: UIView {
 	
 	private lazy var myNameLabel:UILabel = {
 		let label = UILabel()
+		label.textColor = .white
 		label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
 		label.textAlignment = .left
 		label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +49,8 @@ class HeaderView: UIView {
 
 	private lazy var myCurrentPositionLabel:UILabel = {
 		let label = UILabel()
-		label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+		label.textColor = .white
+		label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 		label.textAlignment = .left
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
@@ -60,12 +67,14 @@ class HeaderView: UIView {
 	}
 	
 	private func setupView(){
-		backgroundColor = .red
+		backgroundColor = .black
 		addSubview(avatarImageView)
 		addSubview(myNameLabel)
 		addSubview(myCurrentPositionLabel)
 		addSubview(resumeLabel)
 		setupLayout()
+		avatarImageView.layer.cornerRadius = 50
+		avatarImageView.layer.masksToBounds = true
 	}
 	
 	private func setupLayout(){
@@ -80,11 +89,13 @@ class HeaderView: UIView {
 			myNameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 12),
 			myNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
 			myNameLabel.heightAnchor.constraint(equalToConstant: 30),
+			myNameLabel.bottomAnchor.constraint(equalTo: myCurrentPositionLabel.topAnchor),
 		// pin position to superview
 			myCurrentPositionLabel.topAnchor.constraint(equalTo: myNameLabel.bottomAnchor, constant: 8),
 			myCurrentPositionLabel.leadingAnchor.constraint(equalTo: myNameLabel.leadingAnchor),
 			myCurrentPositionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
 			myCurrentPositionLabel.heightAnchor.constraint(equalToConstant: 20),
+			myCurrentPositionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
 		// pin resume to superview
 			resumeLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
 			resumeLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
@@ -105,4 +116,10 @@ class HeaderView: UIView {
 		self.resumeLabel.text = headerInfo.resume
 	}
 	
+}
+
+extension HeaderView: HeaderViewable{
+	func updateView() {
+		
+	}
 }

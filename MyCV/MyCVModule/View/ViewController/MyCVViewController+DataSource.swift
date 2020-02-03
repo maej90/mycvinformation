@@ -21,35 +21,12 @@ extension MyCVViewController:UITableViewDataSource{
 		
 		let section = self.presenter.section(atIndex: indexPath.section)
 
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceIdentifier", for: indexPath) as? ExperienceTableViewCell{
-						if let row = section?.rows[indexPath.row]{
-							cell.setup(row: row)
-							return cell
-						}
-		//				if let experience = section?.rows[indexPath.row] as? Work{
-		//					cell.setup(period: experience.period, position: experience.position, company: experience.company, acomplishments: experience.accomplishments)
-		//					return cell
-		//				}
-					}
-		
-//		if indexPath.section == 0{
-//			//Experience
-//			if let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceIdentifier", for: indexPath) as? ExperienceTableViewCell{
-//				if let row = section?.rows[indexPath.row]{
-//					cell.setup(row: row)
-//					return cell
-//				}
-////				if let experience = section?.rows[indexPath.row] as? Work{
-////					cell.setup(period: experience.period, position: experience.position, company: experience.company, acomplishments: experience.accomplishments)
-////					return cell
-////				}
-//			}
-//		}
-//		else{
-//			let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//			cell.textLabel?.text = "HOLA MUNdo"
-//			return cell
-//		}
+		if let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceIdentifier", for: indexPath) as? CVTableViewCell{
+			if let row = section?.rows[indexPath.row]{
+				cell.setup(row: row)
+				return cell
+			}
+		}
 		return UITableViewCell()
 	}
 }

@@ -18,7 +18,7 @@ class SectionView: UIView {
 		let label = UILabel()
 		label.text = ""
 		label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-		label.textColor = .blue
+		label.textColor = .white
 		label.textAlignment = .left
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.sizeToFit()
@@ -36,7 +36,7 @@ class SectionView: UIView {
 	}
 	
 	private func setupView(){
-		backgroundColor = .white
+		backgroundColor = .black
 		addSubview(titleLabel)
 		setupLayout()
 	}

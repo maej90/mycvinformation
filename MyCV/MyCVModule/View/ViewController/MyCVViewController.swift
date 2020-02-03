@@ -27,7 +27,7 @@ class MyCVViewController: UIViewController {
 		super.viewDidLoad()
 		self.activityIndicator.startAnimating()
 		//Register custom cells
-		self.tableView.register(UINib(nibName: "ExperienceTableViewCell", bundle: nil), forCellReuseIdentifier: "ExperienceIdentifier")
+		self.tableView.register(UINib(nibName: "CVTableViewCell", bundle: nil), forCellReuseIdentifier: "ExperienceIdentifier")
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 		
 		//Lets create and add the stretchy header
